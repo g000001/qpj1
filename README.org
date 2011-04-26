@@ -12,22 +12,22 @@
 - quickproject
 - fiveam
 導入:
-#+begin_src common-lisp
+#+BEGIN_SRC common-lisp
 (ql:quickload :qpj1)
 (ql:quickload :fiveam)
-#+end_src
+#+END_SRC
 
 ** 制限
 - READMEはorg-mode用ファイル
 - テストは、FiveAM決め打ち
 
 ** 改善点
-#+begin_src common-lisp
+#+BEGIN_SRC common-lisp
 (run! 'foo-internal::foo)
 #+END_SRC
 となっている。
-#+begin_src common-lisp
+#+BEGIN_SRC common-lisp
 (run! 'foo:foo)
-#+end_src
+#+END_SRC
 の方が好ましいかもしれない。(雛形ごとにパッケージと同名のシンボルが生成されEXPORTされることになる)
 
