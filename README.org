@@ -1,0 +1,9 @@
+* MY QUICKPROJECT
+
+- package.lisp
+  パッケージの記述
+- project-name.asd
+  ファイルやライブラリの依存関係など記述
+- project-name.lisp
+
+というプロジェクトの雛形を作成する
