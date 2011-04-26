@@ -1,4 +1,4 @@
-* MY QUICKPROJECT
+* QPJ1 - My QuickProject
 
 - package.lisp
   パッケージの記述
@@ -7,3 +7,27 @@
 - project-name.lisp
 
 というプロジェクトの雛形を作成する
+
+** 依存パッケージ
+- quickproject
+- fiveam
+導入:
+#+BEGIN_SRC lisp
+(ql:quickload :qpj1)
+(ql:quickload :fiveam)
+#+END_SRC
+
+** 制限
+- READMEはorg-mode用ファイル
+- テストは、FiveAM決め打ち
+
+** 改善点
+#+BEGIN_SRC lisp
+(run! 'foo-internal::foo)
+#+END_SRC
+となっている。
+#+BEGIN_SRC lisp
+(run! ':foo)
+#+END_SRC
+の方が好ましいかもしれない。(雛形ごとにパッケージと同名のシンボルが生成されEXPORTされることになる)
+
