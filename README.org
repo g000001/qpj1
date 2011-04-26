@@ -13,10 +13,17 @@
 - fiveam
 導入:
 #+BEGIN_SRC common-lisp
-(ql:quickload :qpj1)
+(ql:quickload :quickproject)
 (ql:quickload :fiveam)
 #+END_SRC
-
+** インストール
+#+BEGIN_SRC common-lisp
+(ql:quickload :qpj1)
+#+END_SRC
+** 使い方
+#+BEGIN_SRC common-lisp
+(qpj1:make-project "/tmp/p/" :depends-on '(:quickproject)) ; パス名の末尾のスラッシュ大事
+#+END_SRC
 ** 制限
 - READMEはorg-mode用ファイル
 - テストは、FiveAM決め打ち
