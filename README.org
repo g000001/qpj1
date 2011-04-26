@@ -22,7 +22,8 @@
 #+END_SRC
 ** 使い方
 #+BEGIN_SRC common-lisp
-(qpj1:make-project "/tmp/p/" :depends-on '(:quickproject)) ; パス名の末尾のスラッシュ大事
+(qpj1:make-project "/path/to/my-project/" :depends-on '(依存しているプロジェクト/システム名))
+;; パス名の末尾のスラッシュ大事
 #+END_SRC
 ** 制限
 - READMEはorg-mode用ファイル
