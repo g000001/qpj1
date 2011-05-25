@@ -22,7 +22,7 @@ string designator and upcased."
     (quickproject::file-comment-header stream)
     (format stream "(cl:in-package :cl-user)~%~%")
     (format stream "(defpackage ~S~%" (keyword-symbolize name))
-    (format stream "  (:use))~%~%")
+    (format stream "  (:use)~%~%")
     (format stream "  (:export))~%~%")
     (format stream "(defpackage ~S-internal~%" (keyword-symbolize name))
     (format stream "  (:use ~S :cl :fiveam))~%~%" (keyword-symbolize name))))
