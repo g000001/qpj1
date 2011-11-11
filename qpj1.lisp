@@ -33,9 +33,8 @@ string designator and upcased."
     (format stream "(cl:in-package :asdf)~%~%")
     (format stream "(defsystem ~S~%" (keyword-symbolize name))
     (format stream "  :serial t~%")
-    (when depends-on
-      (format stream "  :depends-on (~{~S~^~%~15T~})~%"
-              (cons :fiveam (mapcar #'keyword-symbolize depends-on))))
+    (format stream "  :depends-on (~{~S~^~%~15T~})~%"
+            (cons :fiveam (when depends-on (mapcar #'keyword-symbolize depends-on))))
     (format stream "  :components ((:file \"package\")~%")
     (format stream "               (:file ~S)))~%~%" name)
 
